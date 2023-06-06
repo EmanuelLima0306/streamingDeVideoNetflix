@@ -1,0 +1,473 @@
+body{
+    background-color: #000;
+}
+
+header{
+  padding: 50px;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.69) 0%,
+    rgba(0,0,0,0) 100%
+  );
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.btn-custum-white{
+  background-color:  #fff;
+}
+
+.btn-custum-translucent{
+  background-color: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+.btn-custum-translucent:hover{
+  color: #fff;
+  opacity: 0.8;
+}
+
+.btn-custum-white:hover{
+  opacity: 0.8;
+  color: #fff;
+}
+
+.btn-custom-round{
+  padding: 5px 9px !important;
+}
+
+.opacity-50{
+  opacity: 0.5;
+}
+
+.filme_lista{
+  overflow-x: scroll;
+  list-style: none;
+  white-space:nowrap;
+  padding: 20px 0;
+  border: 1px solid transparent;
+  display: block;
+  
+}
+
+/* HIDE SCROLLBAR FOR CHROME, SAFARI AND OPERA*/
+.filme_lista::-webkit-scrollbar{
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.filme_lista {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.filme{
+  display: inline-block;
+  width: 235px;
+  margin-right: 10px;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow: auto;
+  border: 1px solid transparent;
+  overflow-y: hidden;
+}
+.filme:first-child{
+  margin-left: 70px;
+}
+.filme:last-child{
+  margin-right: 70px;
+}
+
+.filme:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  z-index: 999;
+  transition: 0.5s;
+}
+
+.filme:hover .filme_info{
+  transform: scale(1);
+  transition: 0.5s;
+}
+
+.filme_info{
+  background-color: #171717;
+  padding: 10px;
+  height: 100px;
+  width: 100%;
+  transform: scale(0);
+}
+
+.filme_info .col-12{
+  margin-top: 5px;
+}
+
+.filme_info .col-12:first-child{
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.filme_info p{
+  color: #7E7B7B;
+  font-size: 12px;
+
+}
+
+.filme_info p text{
+  color: #fff;
+}
+
+section{
+  margin-bottom: -100px;
+  position: relative;
+}
+
+section:hover{
+  z-index: 9;
+}
+
+.button-carousel{
+  width: 70px;
+  height: 200px;
+}
+
+/* LOGIN */
+body.bg_filmes{
+  background-image: url(../imagens/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#logo_login{
+  width: 150px;
+}
+
+#caixa_login{
+  background: rgba(0,0,0,0.7);
+  padding: 30px;
+  margin-top: 150px;
+}
+
+/* HOME */
+
+.corMenu{
+  background: linear-gradient(
+    180deg,
+    rgba(23,23,23,0.99) 100%,
+    rgb(17, 17, 17,0) 0%
+  );
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1s all;
+}
+#logo_home{
+  width: 150px;
+}
+
+.menu_list{
+  list-style: none;
+  padding-left: 0;
+  padding-top: 7px;
+  
+}
+
+.menu_list li{
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.menu_list li a{
+  color: #fff;
+  cursor: pointer;
+}
+.menu_list li a:hover{
+  color: #7E7B7B;
+}
+
+#form-pesquisa button{
+  border-color: #fff;
+  color: white;
+  background-color: #171717;
+}
+
+#form-pesquisa button:hover{
+  /*color: #7E7B7B;*/
+  background-color: #333333;
+}
+
+#hero{
+  height: 700px;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+#hero::after{
+  content: '';
+  width: 100%;
+  height: 140px;
+  display: block;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    #000000 100%
+  );
+  position: absolute;
+  left: 0;
+  z-index: 2;
+ /* top: calc(700px-350px);*/
+}
+
+#hero_infos {
+  padding: 0;
+  margin-top: 170px;
+  z-index: 3;
+  position: relative;
+}
+
+#hero_infos img.logo {
+  margin-bottom: 50px;
+  width: 500px;
+  max-width: 500px;
+  max-height: 150px;
+}
+
+#hero_infos h1{
+  margin-bottom: 20px;
+}
+
+#hero_infos h1 img{
+  width: 50px;
+  margin-top: -10px;
+  margin-right: 5px;
+}
+
+#main-content{
+  margin-top: 700px;
+}
+
+/* MODAL */
+
+.modal-dialog, .modal-content{
+  background: #171717;
+}
+
+.modal-dialog{
+  max-width: 600px;
+}
+
+.modal-hero{
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px;
+  margin-bottom: 30px;
+}
+
+.modal-hero::after{
+  content: '';
+  width: 100%;
+  height: 100px;
+  display: block;
+  background: line;
+  background: linear-gradient(
+    180deg,
+    rgba(23,23,23,0) 0%,
+    #171717 100%
+  );
+  position: absolute;
+  margin-top: -80px;
+  left: 0;
+  z-index: 1;
+}
+
+.modal-hero img{
+  width: 250px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 100px;
+}
+
+.modal-hero-infos{
+  position: relative;
+  z-index: 2;
+}
+
+.modal-hero-infos button:first-child{
+  margin-right: 20px;
+}
+
+.filme_descricao{
+  font-size: 15px;
+  color: #fff;
+}
+
+.filme_elenco{
+  font-size: 13px;
+  color: rgba(255,255,255,0.2);
+}
+
+.filme_elenco text{
+  color: #fff;
+}
+
+#lista_episodeos{
+  list-style: none;
+  padding: 0;
+}
+
+#lista_episodeos li:hover{
+  cursor: pointer;
+  background: rgba(255, 255, 2550,0.05);
+}
+
+#lista_episodeos li{
+  padding: 20px;
+}
+
+#lista_episodeos li p{
+  font-size: 11px;
+}
+
+
+/* ESTILO DO VIDEO EM REPRODUCAO SCREEN */
+
+
+#div_video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 2147483647 ;
+  transform: translateX(-50%) translateY(-50%);
+/*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
+background-size: cover;
+transition: 1s opacity;
+margin-top: 0;
+margin-left: 0;
+margin-bottom: 0;
+background-color: #000;
+}
+
+#video_screen{
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+}
+
+#container_top_video{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 5%;
+  width: auto;
+  height: auto;
+  z-index: 2;
+}
+
+#container_top_video div{
+  margin-left: 40px;
+}
+
+#btn_video_info{
+  margin-left: 90%;
+}
+
+/* Estilo do controlador do video */
+
+#container_controls{
+  /*visibility: hidden;*/
+  opacity: 0;
+  width: 700px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 25%;
+  background-color: #000;
+  box-shadow: 3px 3px 4px lightgray;
+  transition: 1s all;
+  display: flex;
+}
+
+#div_video:hover #container_controls,
+#div_video:focus-within #container_controls {
+  opacity: 1;
+}
+
+.timer {
+  line-height: 38px;
+  font-size: 10px;
+  font-family: monospace;
+  text-shadow: 1px 1px 0px black;
+  color: white;
+  flex: 5;
+  position: relative;
+  background-color: #171717;
+}
+
+.timer div {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 38px;
+  z-index: 2;
+}
+
+.timer span {
+  position: absolute;
+  z-index: 3;
+  left: 40%;
+}
+
+.dropup ul{ /* Estilo das opcoes de fazer o filme ir mais rapido ou lento*/
+
+  background: #171717;
+
+}
+
+.dropup ul li div {
+  margin: 0 auto;
+  margin-left: 20px;
+}
+.dropup ul li div input{
+  cursor: pointer;
+}
+.dropup ul li div label{
+  color: #fff;
+}
+
+#volumeControl ul li{
+  color: #fff;
+  display: inline-block;
+}
+
+/* registro de novo usuario */
+#staticBackdrop div{
+  background-color: #171717;
+  color: #fff;
+}
+
+#lbNomeUser {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+
+#btnSair{
+  background-color: red;
+}

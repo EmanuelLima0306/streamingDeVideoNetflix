@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--  <link rel="stylesheet" href="bootstrap-5.2.3/dist/css/bootstrap.min.css"> 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap-5.2.3/dist/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/MaterialDesign-Webfont-master/css/materialdesignicons.min.css')}}">
+    <title>Home</title>
+    
+</head>
+<body>
+
+<!-- Modal Original -->
+  <div class="modal fade" id="modal-filme">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-hero" id="m-hero">
+          <img src="{{url_for('static', filename='imagens/diabodecadadia.png')}}" alt="" id="hero_image_title"/>
+          <div class="col-12 modal-hero-infos" id="modal-buttons">
+            
+          </div>
+        </div>
+        <div class="modal-infos">
+          <div class="container">
+            <div class="row">
+              <div class="col-7" id="descricao_filme">
+                <p class="filme_descricao"></p>
+              </div>
+              <div class="col-5" id="elenco">
+                <p class="filme_elenco">
+                 
+                </p>
+              </div>
+            </div>
+            <br/>
+            <div class="row info-temp" id="info_temporadas">
+              <div class="col-7">
+                <h3 class="text-white">Episodios</h3>
+              </div>
+              <div class="col-5 text-right">
+                <select name="" id="" class="form-control">
+                  <option >Temporada 1</option>
+                  <option >Temporada 2</option>
+                </select>
+
+              </div>
+            </div>
+            <br/>
+            <div class="row info-temp" id="episodeos">
+              <ul id="lista_episodeos">
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+  </div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top" id="navBar">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler bg-white"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+    <span class="navbar-toggler-icon color-white"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <div class="navbar-brand">
+        <img src="{{url_for('static', filename='imagens/logo.png')}}" alt="" id="logo_home">
+      </div>
+      <ul class="menu_list navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" id="homePage" onclick="homePage()">
+          <a class="nav-link" aria-current="page" >Página inicial</a>
+        </li>
+        <li class="nav-item" id="menuSerie" onclick="sourchSerie()">
+          <a class="nav-link">Séries</a>
+        </li>
+        <li class="nav-item" id="menuFilme" onclick="sourchMove()">
+          <a class="nav-link" >Filmes</a>
+        </li>
+        <li class="nav-item" id="menuAnime" onclick="sourchAnime()">
+          <a class="nav-link">Anime</a>
+        </li>
+        <li class="nav-item" id="menuGosto" onclick="sourchLike()">
+          <a class="nav-link">Com gosto</a>
+        </li>
+        <li class="nav-item" id="menuMinhaLista" onclick="sourchLista()">
+          <a class="nav-link">Minha Lista</a>
+        </li>
+      </ul>
+      <form class="d-flex input-group w-auto" id="form-pesquisa">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Pesquisa"
+          aria-label="Search"
+          id="searchMove"
+          onkeyup="pesquisar()"
+        />
+        <button
+          class="btn btn-outline-primary"
+          type="button"
+          data-bs-ripple-color="dark"
+          onclick="pesquisar()"
+        >
+          Pesquisar
+        </button>
+        <div class="row mt-0">
+          <div class="col text-muted">
+            <p id="lbNomeUser"> {{userLogado.nome}} </p>
+          </div>
+          <div class="col text-right">
+            <button type="button" class="btn btn-danger" id="btnLogout">Sair</button>
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- Navbar -->
+
+  <div class="container-fluid" id="hero">
+    <div class="container">
+      <div class="row" id="hero_infos">
+        <div class="col-6">
+          <img src="{{url_for('static', filename='imagens/diabodecadadia.png')}}" alt="" class="logo" id="hero_logo">
+          <h1 class="text-white"><img src="{{url_for('static', filename='imagens/top 10.png')}}" alt=""/> Top 1 de hoje em Angola</h1>
+          <p class="text-white">
+            Inteligente, sarcástica e um pouco morta por dentro, Wednesday Addams investiga uma vaga de homicídios e faz novos amigos, e inimigos, na Academia Nevermore.
+          </p>
+          <br/>
+          <button class="btn btn-lg btn-custum-white" onclick="playVitrine()">
+            <span class="mdi mdi-play"></span> Assistir
+          </button>
+          <button class="btn btn-lg btn-custum-translucent" data-bs-toggle="modal" data-bs-target="#modal-filme" onclick="showMoreInfo()">
+            <span class="mdi mdi-information-outline"></span>Mais Informações
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="main-content">
+
+
+
+</div>
+<script src="{{url_for('static', filename="bootstrap-5.2.3/dist/js/bootstrap.min.js")}}"></script>
+  <script src="{{url_for('static', filename="bootstrap-5.2.3/dist/js/bootstrap.bundle.min.js")}}"></script>
+  <script src="{{url_for('static', filename="jquery/jquery-3.6.1/jquery-3.6.1/jquery-3.6.1.js")}}"></script>
+  <script src="{{url_for('static', filename="jquery/jquery-3.6.1/jquery-3.6.1/jquery-3.6.1.min.js")}}"></script>
+  <script src="{{url_for('static', filename="js/script.js")}}"></script>
+<!--     <script src="bootstrap-5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery/jquery-3.6.1/jquery-3.6.1/jquery-3.6.1.js"></script>
+    <script src="jquery/jquery-3.6.1/jquery-3.6.1/jquery-3.6.1.min.js"></script> 
+     <script src="javaScript/script.js"></script> 
+
+-->
+</body>
+</html>
